@@ -19,6 +19,6 @@ var createWorker = function() {
 
 
 var worker = createWorker();
-
+//this creates a global variable AVIOD see:IIFE
 worker.job1();
 worker.job2();
