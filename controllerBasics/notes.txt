@@ -1,0 +1,2 @@
+controllers are functions
+$ prefix says it's supplied by angular
