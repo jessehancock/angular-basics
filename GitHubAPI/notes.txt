@@ -1,0 +1,4 @@
+GET POST PUT DELETE
+All gets are asynchronous
+
+npm install --save nodemon body-parser cors express massive

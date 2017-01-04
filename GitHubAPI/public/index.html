@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-controller="mainCtrl">
+    <h1>Always appear</h1>
+    <h2>Name: {{user.login}}</h2>
+    <img ng-src="{{user.avatar_url}}">
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"> </script>
+  <script src="./app/app.module.js"> </script>
+  <script src="./app/mainCtrl.js">  </script>
+  <script src="./app/mainServ.js">  </script>
+</html>
