@@ -11,9 +11,12 @@
       <input tyep="search" required placeholder="username to search" ng-model="username"  >
       <button type="submit" value="search" >Search</button>
     </form>
-    {{error}}
+    <h2>{{error}}</h2>
     <h2>{{user.login}}</h2>
-    <img ng-src="{{user.avatar_url}}">
+
+    <!-- This ng-show helps hide the image if the api call comes back empty -->
+    <img ng-show="user.avatar_url" ng-src="{{user.avatar_url}}">
+
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"> </script>
