@@ -1,0 +1,4 @@
+Directives
+{{}} -data bind by using double curly mustache brackets
+ng-model - two way binding
+ng-click - preforms action
