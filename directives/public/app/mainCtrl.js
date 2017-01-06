@@ -3,6 +3,7 @@
 angular.module("app").controller("mainCtrl", function($scope, mainServ) {
   // VARIABLES
   // ==========================================================
+  $scope.repoSortOrder = '-stargazers_count'
   // FUNCTIONS
   // ===========================================================
   var onUserCompelete = function(response){

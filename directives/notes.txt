@@ -3,3 +3,5 @@ Directives
 ng-model - two way binding
 ng-click - preforms action
 ng-submit - preforms action with spacebar/enter
+ng-src - used for images as the src of image
+ng-show- used to show and hide info
