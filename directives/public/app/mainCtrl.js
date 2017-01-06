@@ -5,19 +5,27 @@ angular.module("app").controller("mainCtrl", function($scope, mainServ) {
   // ==========================================================
   // FUNCTIONS
   // ===========================================================
-  var onCompelete = function(response){
+  var onUserCompelete = function(response){
     $scope.user = response;
     $scope.error = null;
+    console.log(response.repos_url);
+    (function() {
+      mainServ.gitHubRepos($scope.user.repos_url).then(onRepos, onError)
+    }())
+  }
+
+  var onRepos = function (response) {
+    $scope.repos = response;
   }
 
   var onError = function (reason) {
-    console.log(reason.status);
     $scope.user = null;
-    $scope.error = "could not fetch the user"
+    $scope.repos = null;
+    $scope.error = "could not fetch the data";
   }
 
-// this promise calls two functions 
+// this promise calls two functions
   $scope.search = function (username) {
-    mainServ.gitHubAPI(username).then(onCompelete, onError)
+    mainServ.gitHubUser(username).then(onUserCompelete, onError)
   };
 });
