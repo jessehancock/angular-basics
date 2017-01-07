@@ -1,0 +1,5 @@
+Role of Services
+Keep complexity outside the CONTROLLER
+
+built in Services
+$http $interval $browser $timeout $log
