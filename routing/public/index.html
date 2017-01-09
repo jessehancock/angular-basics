@@ -4,24 +4,23 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body ng-controller="mainCtrl">
+
+
+
+  <body>
     <h1>GitHub Viewer</h1>
-    <!--Using form helps with empty fields-->
-    <form name="searchUser" ng-submit="search(username)">
-      <input type="search" required placeholder="username to search" ng-model="username"  >
-      <button type="submit" value="search" >Search</button>
-    </form>
-    {{countdown}}
-    <h2>{{error}}</h2>
+    <ui-view></ui-view>
 
 
-    <div ng-include="'./app/userdetails.html'" ng-show="user"></div>
 
 
-  </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"> </script>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js'></script>
+
   <script src="./app/app.module.js"> </script>
-  <script src="./app/mainCtrl.js">  </script>
+  <script src="./app/main/mainCtrl.js">  </script>
+  <script src="./app/user/userCtrl.js">  </script>
   <script src="./app/mainServ.js">  </script>
+  </body>
 </html>

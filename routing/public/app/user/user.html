@@ -1,6 +1,6 @@
-<div>
+<div ng-controller="userCtrl">
   <h2>{{user.login}}</h2>
-
+  {{error}}
   <!-- This ng-show helps hide the image if the api call comes back empty -->
   <img  ng-src="{{user.avatar_url}}" />
   Order:
@@ -31,3 +31,5 @@
     </tr>
   </tbody>
 </table>
+
+<a ui-sref='main'>Back to Search</a>

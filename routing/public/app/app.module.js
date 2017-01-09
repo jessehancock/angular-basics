@@ -1,22 +1,20 @@
-angular.module("app", ['ui-router'])
-.config(function($stateProvider, $urlRouterProvider){
-	$urlRouterProvider.otherwise('/');
+angular.module('app', ['ui.router'])
+.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider){
+	$urlRouterProvider.otherwise('/main');
 
 	$stateProvider
-	.state('home', {
-    url: '/',
-    templateUrl: './public/views/home.html'
+	.state('main', {
+    url: '/main',
+		controller: 'mainCtrl',
+    templateUrl: './app/main/main.html'
    })
-  .state('about', {
-    url: '/about',
-    templateUrl: './public/views/about.html'
+  .state('repo', {
+    url: '/repo',
+    templateUrl: './app/repo/repo.html'
    })
-   .state('detox', {
-    url: '/detox',
-    templateUrl: './public/views/detox.html'
+   .state('user', {
+    url: '/user/:username',
+    templateUrl: './app/user/user.html',
+		controller: 'userCtrl'
    })
-  //  .state('registration', {
-  //   url: '/registration',
-  //   templateUrl: './views/registration.html'
-  //  })
-})
+}])
