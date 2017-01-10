@@ -9,7 +9,8 @@ angular.module('app', ['ui.router'])
     templateUrl: './app/main/main.html'
    })
   .state('repo', {
-    url: '/repo',
+    url: '/repo/:username/:reponame',
+		controller: 'repoCtrl',
     templateUrl: './app/repo/repo.html'
    })
    .state('user', {

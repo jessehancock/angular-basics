@@ -1,3 +1,20 @@
-<div class="">
-  hello
+<div>
+ <h2>{{username}}</h2>
+ <h3>{{reponame}}</h3>
+
+<p>Stars {{repo.stargazers_count
+}}</p>
+<p>Owner {{repo.owner.login
+}}</p>
+
+
+ <h4>Contributors</h4>
+ <ul ng-repeat="contributor in contributors">
+   <li>{{contributor.login}}</li>
+ </ul>
 </div>
+
+<a href='#/user/{{repo.owner.login}}'>Back to User</a>
+<a ui-sref='main'>Back to Search</a>
+<!-- BELOW DOES NOT WORK -->
+<!-- <a ui-sref='user/{{repo.owner.login}}'>Back to User</a> -->

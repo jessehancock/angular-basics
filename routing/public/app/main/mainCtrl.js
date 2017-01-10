@@ -3,7 +3,6 @@
 angular.module("app").controller("mainCtrl", function($scope, $interval, $location) {
   // VARIABLES
   // ==========================================================
-  console.log('mainCtrl');
   $scope.countdown = 5;
   $scope.username = 'jessehancock';
   // FUNCTIONS

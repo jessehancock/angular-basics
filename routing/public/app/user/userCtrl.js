@@ -1,6 +1,6 @@
 // INITILIZE CONTROLLER
 // ============================================================
-angular.module("app").controller("userCtrl", function($scope, mainServ, $stateParams) {
+angular.module("app").controller("userCtrl", function($scope, mainServ, $stateParams, $location) {
   // VARIABLES
   // ==========================================================
 
@@ -28,5 +28,8 @@ angular.module("app").controller("userCtrl", function($scope, mainServ, $statePa
 
   mainServ.gitHubUser($scope.username).then(onUserCompelete, onError);
 
-// this promise calls two functions
+//THIS CALLS SENDS THE USER TO THE REPO.html
+  $scope.searchRepo = function(username, reponame){
+      $location.path("/repo/" + username + "/" + reponame);
+  }
 });

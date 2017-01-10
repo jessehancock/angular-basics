@@ -25,7 +25,7 @@
   <tbody>
     <!-- Order by filter  -->
     <tr ng-repeat="repo in repos | orderBy: repoSortOrder">
-      <td>{{repo.name}}</td>
+      <td ng-click="searchRepo(user.login, repo.name)">{{repo.name}}</td>
       <td>{{repo.stargazers_count | number}}</td>
       <td>{{repo.language}}</td>
     </tr>
