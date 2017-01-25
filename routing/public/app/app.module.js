@@ -1,3 +1,5 @@
+// Use of ui-router is much easier than the router angular
+
 angular.module('app', ['ui.router'])
 .config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise('/main');
